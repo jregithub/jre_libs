@@ -1,5 +1,5 @@
 def call(ip,warName,credID){
-sshagent(["$(credID)"]) {
+sshagent(["${credID}"]) {
                     
 		    sh "scp -o StrictHostKeyChecking=no target/ai-leads.war ec2-user@${ip}:/opt/tomcat9/webapps/"
                     # stop tomcat
